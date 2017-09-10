@@ -33,7 +33,7 @@ class GoogleSheet < ApplicationRecord
 		return nil if row_index == -1
 
 		locations = (2..worksheet.num_rows).map {|row| worksheet[row, row_index]}
-		return locations.join "\n\n"
+		return locations
 	end
 
 

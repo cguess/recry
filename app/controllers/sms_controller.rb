@@ -23,7 +23,7 @@ class SmsController < ApplicationController
 				message_text = "Please choose an subject for information between 1 and #{subjects.count}\n----\n" + message_for_subjects(subjects)
 			else
 				subject = subjects[option_number - 1]
-				message_text = subject + "\n----\n" + GoogleSheet.instance.locations_for_subject(subject)
+				message_text = subject + "\n----\n" + GoogleSheet.instance.locations_for_subject(subject).join("\n\n")
 			end
 		else
 			acceptable_response = false
@@ -41,7 +41,7 @@ class SmsController < ApplicationController
 
 			if(acceptable_response == true)
 				subject = subjects[subject_index]
-				message_text = subject + "\n----\n" + GoogleSheet.instance.locations_for_subject(subject)
+				message_text = subject + "\n----\n" + GoogleSheet.instance.locations_for_subject(subject).join("\n\n")
 			else
 				message_text = "Please reply with the number of the option below for information on services available.\n----\n" + message_for_subjects(subjects)
 			end
@@ -59,10 +59,9 @@ class SmsController < ApplicationController
 		message_text = ""
 		index = 1
 		subjects.each do |subject|
-			message_text += "#{index}.) #{subject}\n"
+			message_text += "#{index}) #{subject}\n"
 			index += 1
 		end
-
 		return message_text
 	end
 

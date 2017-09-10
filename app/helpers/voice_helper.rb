@@ -1,0 +1,2 @@
+module VoiceHelper
+end
