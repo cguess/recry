@@ -20,13 +20,31 @@ class SmsController < ApplicationController
 			end
 
 			if option_number > subjects.count || option_number < 1	
-				message_text = "Please choose an subject for information between 1 and #{subjects.count}\n----\n\n" + message_for_subjects(subjects)
+				message_text = "Please choose an subject for information between 1 and #{subjects.count}\n----\n" + message_for_subjects(subjects)
 			else
 				subject = subjects[option_number - 1]
 				message_text = subject + "\n----\n" + GoogleSheet.instance.locations_for_subject(subject)
 			end
 		else
-			message_text = "Please respond with one of the option numbers for information about available locations and hours.\n----\n\n" + message_for_subjects(subjects)
+			acceptable_response = false
+			subject_index = -1
+			index = 0
+			subjects.each do |subject|
+
+				if subject.downcase == params[:Body].downcase
+					acceptable_response = true
+					subject_index = index
+					break
+				end
+				index += 1
+			end
+
+			if(acceptable_response == true)
+				subject = subjects[subject_index]
+				message_text = subject + "\n----\n" + GoogleSheet.instance.locations_for_subject(subject)
+			else
+				message_text = "Please reply with the number of the option below for information on services available.\n----\n" + message_for_subjects(subjects)
+			end
 		end
 
 		response.message do |message|

@@ -16,7 +16,7 @@ class GoogleSheet < ApplicationRecord
 		return worksheet.rows.first
 	end
 
-	def locations_for_subject subject
+	def locations_for_subject subject_to_search
 		# Get the spreadsheet by its title
 		spreadsheet = @session.spreadsheet_by_title(ENV['GOOGLE_SHEET_NAME'])
 		# Find the correct column to look for
@@ -26,7 +26,7 @@ class GoogleSheet < ApplicationRecord
 		subjects = worksheet.rows.first
 		subjects.each do |subject|
 			row_index += 1
-			break if subject == subject
+			break if subject_to_search == subject
 			row_index = -1 if subject == subjects.last
 		end
 
