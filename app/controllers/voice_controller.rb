@@ -31,8 +31,7 @@ class VoiceController < ApplicationController
 	  else
 		  message = Twilio::TwiML::VoiceResponse.new do |r|
 		    r.gather numDigits: 1 do |g|
-			    # Use <Say> to give the caller some instructions
-			    r.say('Thank you for calling the Rockport Fulton Chamber of Commerce Health Information Brochure. Please choose from one of the following options.', voice: 'alice')
+			    r.say("Thank you for calling the #{ENV['PROJECT_TITLE']}. Please choose from one of the following options.", voice: 'alice')
 
 					index = 1
 					subjects.each do |subject|
