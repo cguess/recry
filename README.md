@@ -21,6 +21,7 @@ Required
 * Ruby on Rails 5
 * Postgres
 * Twilio Account
+* A Google account
 * A host (I use Heroku, which just makes it easier and takes the pressure off me to manage a full server stack)
 
 ## Installation
