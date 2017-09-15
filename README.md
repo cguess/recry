@@ -56,7 +56,7 @@ It may seem like a lot, but most of this goes extremely quickly.
 1. In the upper-right of the page, click your username, and then click "Account"
 1. Under the "API Credentials" panel take note of the live "Account SID" and "Auth Token" (you'll have to click on the eye to be able to see it)
 
-### Setup the Google Sheet
+#### Setup the Google Sheet
 1. Go to https://docs.google.com/spreadsheets/u/0/
 1. Create a new sheet, title it something meaningful for your and your team, take note of this name.
 
@@ -71,7 +71,7 @@ It may seem like a lot, but most of this goes extremely quickly.
 1. Those are the credentials your application will need. They represent a user that can update spreadsheets on your behalf. We still need to give this user access to the spreadsheet we want to use though. Open client_secret.json and find and copy the client_email. In your spreadsheet click the “Share” button in the top right and paste the email, giving your service account edit rights.
 
 
-### Finish Heroku Setup
+#### Finish Heroku Setup
 1. Go to https://dashboard.heroku.com
 1. Click on the new app you've just made
 1. Go to the "Resources" tab
@@ -106,7 +106,7 @@ Example:
 |-------------------------------------------------------|
 ```
 
-##### A few notes
+#### A few notes
 - All colons followed by a single space (": ") are replaced by "at the phone number" when being spoken. This is so that If something is typed in as ```Walmart: 212-555-5050``` it is read as "Walmart, at the phone number two one two five five five five zero five zero"
 
 ## Future improvements
