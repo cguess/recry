@@ -95,7 +95,6 @@ The cateories are the headers of each column. Each row below the top column is a
 
 Example:
 ```
-
 |-------------------------------------------------------|
 | Cateogry 1 |  Category 2  | Category 3  | Category 4  |
 |-------------------------------------------------------|
