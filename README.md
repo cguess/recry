@@ -34,8 +34,8 @@ It may seem like a lot, but most of this goes extremely quickly.
 
 #### Deploy to Heroku
 1. Clone repository
-	```git clone https://www.github.com/cguess/recry
-	cd Recry```
+	```git clone https://www.github.com/cguess/recry```
+	```cd Recry```
 1. Create a Heroku account at https://heroku.com
 1. Install the Heroku CLI with instruction at https://devcenter.heroku.com/articles/heroku-cli
 1. Create a new Heroku app ```heroku create```
