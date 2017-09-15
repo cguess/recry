@@ -94,6 +94,7 @@ All categories and answers are pulled automatically from the Google Sheet create
 The cateories are the headers of each column. Each row below the top column is an answer.
 
 Example:
+```
 
 |-------------------------------------------------------|
 | Cateogry 1 |  Category 2  | Category 3  | Category 4  |
@@ -106,6 +107,7 @@ Example:
 |-------------------------------------------------------|
 | Response 1D|  Response 2D | Response 3D | Response 4D |
 |-------------------------------------------------------|
+```
 
 ##### A few notes
 - All colons followed by a single space (": ") are replaced by "at the phone number" when being spoken. This is so that If something is typed in as ```Walmart: 212-555-5050``` it is read as "Walmart, at the phone number two one two five five five five zero five zero"
