@@ -123,6 +123,8 @@ Example:
 - cguess@gmail.com
 - PGP: [6A6C 0C5C 331A 2F89 7BAF](https://keybase.io/cguess)
 
+- Elayne Saejung
+- elayne.saejung@unmc.edu
 
 ## Copyright
 
