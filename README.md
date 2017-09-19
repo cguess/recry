@@ -4,6 +4,8 @@ Recry is a basic phone tree designed to be easily accessible to the public and e
 
 The project is origianlly created by Christopher Guess and Elayne Saejung as part of the [Field Innovation Team](http://fieldinnovationteam.org/). The first deployment of the project was to support Rockport, Texas's public health information in response to Hurricane Harvey in August 2017.
 
+We wrote an article about the on the ground situation and creation of Recry at https://medium.com/@cguess/spreading-the-word-9dcfe92c958b
+
 ## Use Cases
 
 Recry is designed to serve a limited time frame to distribute information to isolated or technologically impaired populations. These could include areas with severe and widespread power outages, elderly populations with limited knowledge or desire to download specific apps, or impoverished areas with very low smartphone penetration.
